@@ -53,7 +53,7 @@ const PartNumber = () =>{
         // const data_id = data[0].data_id;
         // const file_id = data[0].file_id;
 
-        const dataValue = await axios.post('/api/result/getData', data, {withCredentials: true});
+        const dataValue = await axios.post('https://dummy-zionix-backend3.onrender.com/result/getData', data, {withCredentials: true});
         console.log("Datavalue of result = ",dataValue.data);
 
         const index = dataValue.data.index;
@@ -104,7 +104,7 @@ const PartNumber = () =>{
     const fetchData = async () => {
         try{
             console.log("index data = ",indexData);
-            const databaseData = await axios.post("/api/save/getData",{withCredentials: true});
+            const databaseData = await axios.post("https://dummy-zionix-backend3.onrender.com/save/getData",{withCredentials: true});
             console.log("Data from backend = ",databaseData.data);
             // console.log("Combined data before = ",combinedData);
 

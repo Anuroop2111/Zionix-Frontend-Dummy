@@ -32,7 +32,7 @@ const UploadBOM = () =>{
             const userId = cookieValue.userId;
             console.log("userId = ",userId);
 
-            const response = await axios.post("/api/files/getPastFiles", {userId}, {withCredentials: true});
+            const response = await axios.post("https://dummy-zionix-backend3.onrender.com/files/getPastFiles", {userId}, {withCredentials: true});
             console.log("Response = ", response.data);
             setPastFiles(response.data);
 
@@ -65,7 +65,7 @@ const UploadBOM = () =>{
 
         setUploading(true);
         // const url = "http://localhost:3013/files/processFile";  //"https://run.mocky.io/v3/435e224c-44fb-4773-9faf-380c5e6a2188";
-        const url = "/api/files/processFile";
+        const url = "https://dummy-zionix-backend3.onrender.com/files/processFile";
      
         axios.post(url,formData, { withCredentials: true } ) //{ withCredentials: true }
             .then((response) =>{
