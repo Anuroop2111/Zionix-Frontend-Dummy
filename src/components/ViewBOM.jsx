@@ -92,7 +92,7 @@ const ViewBOM = () => {
 
     const fetchFile = async () =>{
         try {
-            const fileDatabaseData = await axios.post("https://dummy-zionix-backend3.onrender.com/files/getFile",{ withCredentials: true },); // 
+            const fileDatabaseData = await axios.post("/api/files/getFile",{ withCredentials: true },); // 
             console.log("Received File data : ",fileDatabaseData.data);
             const fileName = fileDatabaseData.data.file_name;
             const file_data = fileDatabaseData.data.file_data;
@@ -270,7 +270,7 @@ const ViewBOM = () => {
         console.log("Request Obj = ",requestObj);
 
         // Returns the data of the index that are have invalid/0 qauntity
-        const responseFlag = await axios.post('https://dummy-zionix-backend3.onrender.com/files/checkQuantity',requestObj, {withCredentials: true});
+        const responseFlag = await axios.post('/api/files/checkQuantity',requestObj, {withCredentials: true});
         // If any quantity is invalid, provide option to edit the file on the page and also provide a save File button to save it / Automatically save it / Or when the user edits it, update it in the DB
          
         console.log("responseFlag = ",responseFlag.data.flag);
@@ -280,7 +280,7 @@ const ViewBOM = () => {
             // console.log("ReqData = ",reqData);
 
             // Set the requestObj to a database
-            const saveResponse = await axios.post("https://dummy-zionix-backend3.onrender.com/save/store", requestObj, {withCredentials : true});
+            const saveResponse = await axios.post("/api/save/store", requestObj, {withCredentials : true});
             console.log("Save Response = ",saveResponse.data); // indexArr
             // setIndexData(saveResponse.data);
 
@@ -292,7 +292,7 @@ const ViewBOM = () => {
             showErrorIndex(responseFlag.data.indexIssue);
         }
         setUploading(false);
-        // const response = await axios.post('http://localhost:3013https://dummy-zionix-backend3.onrender.com/test',requestObj);
+        // const response = await axios.post('http://localhost:/api/test',requestObj);
         // setPriceDataState(response.data);
     };
 

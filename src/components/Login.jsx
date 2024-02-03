@@ -24,7 +24,7 @@ const Login = () => {
 
         try {
             console.log("Going to send the credentials")
-            const response = await axios.post("https://dummy-zionix-backend3.onrender.com/authenticate/login", values, {withCredentials: true});
+            const response = await axios.post("/api/authenticate/login", values, {withCredentials: true});
             console.log("Response = ",response);
 
             if (response.data.success){
