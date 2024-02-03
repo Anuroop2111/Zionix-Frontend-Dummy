@@ -7,7 +7,7 @@ import { useCookies } from 'react-cookie';
 import {Table} from 'antd';
 
 import io from 'socket.io-client';
-const socket = io.connect('http://localhost:3013');
+const socket = io.connect('https://dummy-zionix-backend3.onrender.com');
 
 import { useFileContext } from "../FileContext";
 
