@@ -1,0 +1,29 @@
+
+.flex-left {
+    flex: 1;
+    border: 2px solid yellow;
+    margin-right: 20px;
+}  
+
+.flex-right {
+    flex: 1;
+    border: 2px solid yellow;
+
+}
+
+/* YourFormStyles.css */
+
+.custom-form-item {
+    margin-bottom: 16px;
+  }
+  
+  .custom-input {
+    background-color: #f0f0f0; /* Grey background color */
+  }
+  
+  .custom-input:hover,
+  .custom-input:focus {
+    background-color: #ffffff; /* White background color on hover/focus */
+    border: 1px solid #000000; /* Bold black border on hover/focus */
+  }
+  
