@@ -22,7 +22,7 @@ const Registration = () => {
         setSubmitting(false);
 
         try{
-            const response = await axios.post("/api/authenticate/register", values, {withCredentials: true});
+            const response = await axios.post("https://dummy-zionix-backend3.onrender.com/authenticate/register", values, {withCredentials: true});
             console.log("response = ",response);
 
             if (response.data.success){
